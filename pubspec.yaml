@@ -1,6 +1,6 @@
 name: dpad
 description: DPad Widget
-version: 0.0.3
+version: 0.0.4
 author:
 homepage:
 
@@ -51,3 +51,6 @@ flutter:
   #
   # For details regarding fonts in packages, see
   # https://flutter.io/custom-fonts/#from-packages
+
+environment:
+    sdk: ">=2.0.0 <3.0.0"
