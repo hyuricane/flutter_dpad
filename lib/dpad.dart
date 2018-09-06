@@ -111,8 +111,27 @@ class _Dpad extends State<Dpad> {
               break;
           }
           double sideLength = min(constraint.minHeight, constraint.minWidth) * widget.centerRatio;
-          return Container(
+          var c = Container(
             constraints: constraint,
+            // child: Stack(
+            //   children: <Widget>[
+            //     Image(
+            //       image: bgImage,
+            //       fit: BoxFit.fill,
+            //       // placeholder: widget.idleImg,
+            //       // fadeOutDuration: const Duration(milliseconds: 0),
+            //       gaplessPlayback: true,
+            //     ),
+            //     Center(
+            //       child: new Image(
+            //         image: centerImage,
+            //         height: sideLength,
+            //         width: sideLength,
+            //         fit: BoxFit.fill,
+            //         gaplessPlayback: true),
+            //     )
+            //   ],
+            // ),
             decoration: BoxDecoration(
               image: new DecorationImage(image: bgImage),
             ),
@@ -125,6 +144,8 @@ class _Dpad extends State<Dpad> {
                   gaplessPlayback: true),
             ),
           );
+          return c;
+
         }),
       ),
     );
